@@ -1,0 +1,83 @@
+{
+    "routes": [{
+            "method": "GET",
+            "path": "/videos",
+            "handler": "video.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/videos/count",
+            "handler": "video.count",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/videos/:id",
+            "handler": "video.findOne",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/videos",
+            "handler": "video.create",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/videos/:id",
+            "handler": "video.update",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/videos/:id",
+            "handler": "video.delete",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/videos/:id/like",
+            "handler": "video.like",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/videos/:id/favorite",
+            "handler": "video.favorite",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/videos/:id/comment",
+            "handler": "video.comment",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/videos/:id/rate",
+            "handler": "video.rate",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

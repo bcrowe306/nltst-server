@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "via": "posts",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "likes": {
+      "via": "post",
+      "collection": "post-like"
+    }
+  }
+}

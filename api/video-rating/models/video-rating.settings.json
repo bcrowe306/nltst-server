@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_ratings",
+  "info": {
+    "name": "Video_rating"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true,
+      "max": 5,
+      "min": 1
+    },
+    "video": {
+      "via": "ratings",
+      "model": "video"
+    },
+    "user": {
+      "via": "video_ratings",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

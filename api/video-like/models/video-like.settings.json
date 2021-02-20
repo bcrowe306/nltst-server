@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_likes",
+  "info": {
+    "name": "Video_like",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "video": {
+      "via": "likes",
+      "model": "video"
+    },
+    "user": {
+      "via": "video_likes",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

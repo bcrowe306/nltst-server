@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "playlists",
+  "info": {
+    "name": "playlist"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videos": {
+      "via": "playlist",
+      "collection": "video"
+    },
+    "articles": {
+      "via": "playlist",
+      "collection": "article"
+    }
+  }
+}

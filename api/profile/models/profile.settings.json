@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bio": {
+      "type": "text"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "text"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "show_phone": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_birthday": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_email": {
+      "type": "boolean",
+      "default": true
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "user": {
+      "via": "profile",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

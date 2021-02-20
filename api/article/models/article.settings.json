@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    },
+    "author": {
+      "via": "articles",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "likes": {
+      "collection": "like",
+      "via": "article"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "article"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ratings": {
+      "collection": "rating",
+      "via": "article"
+    },
+    "rating": {
+      "type": "float"
+    },
+    "is_liked": {
+      "type": "boolean"
+    },
+    "like_count": {
+      "type": "integer"
+    },
+    "playlist": {
+      "model": "playlist",
+      "via": "articles"
+    }
+  }
+}

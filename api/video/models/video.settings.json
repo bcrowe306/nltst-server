@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "name": "video",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "comments": {
+      "collection": "video-comment",
+      "via": "video"
+    },
+    "likes": {
+      "collection": "video-like",
+      "via": "video"
+    },
+    "ratings": {
+      "collection": "video-rating",
+      "via": "video"
+    },
+    "views": {
+      "collection": "view",
+      "via": "video"
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "rating": {
+      "type": "float"
+    },
+    "like_count": {
+      "type": "integer"
+    },
+    "playlist": {
+      "model": "playlist",
+      "via": "videos"
+    },
+    "is_liked": {
+      "type": "boolean"
+    }
+  }
+}

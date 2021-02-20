@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/video-likes",
+      "handler": "video-like.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-likes/count",
+      "handler": "video-like.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-likes/:id",
+      "handler": "video-like.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/video-likes",
+      "handler": "video-like.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/video-likes/:id",
+      "handler": "video-like.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/video-likes/:id",
+      "handler": "video-like.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

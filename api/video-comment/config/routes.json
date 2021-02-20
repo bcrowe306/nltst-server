@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/video-comments",
+      "handler": "video-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-comments/count",
+      "handler": "video-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-comments/:id",
+      "handler": "video-comment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/video-comments",
+      "handler": "video-comment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/video-comments/:id",
+      "handler": "video-comment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/video-comments/:id",
+      "handler": "video-comment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "name": "request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "fulfilled": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "healing",
+        "salvation",
+        "special"
+      ]
+    }
+  }
+}

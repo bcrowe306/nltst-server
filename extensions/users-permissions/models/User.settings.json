@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "articles": {
+      "collection": "article",
+      "via": "author"
+    },
+    "likes": {
+      "collection": "like",
+      "via": "user"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "author"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "author"
+    },
+    "post_likes": {
+      "collection": "post-like",
+      "via": "user"
+    },
+    "ratings": {
+      "collection": "rating",
+      "via": "user"
+    },
+    "video_ratings": {
+      "collection": "video-rating",
+      "via": "user"
+    },
+    "video_likes": {
+      "collection": "video-like",
+      "via": "user"
+    },
+    "video_comments": {
+      "collection": "video-comment",
+      "via": "user"
+    },
+    "favorite_articles": {
+      "collection": "favorite-article",
+      "via": "user"
+    },
+    "favorite_videos": {
+      "collection": "favorite-video",
+      "via": "user"
+    },
+    "profile": {
+      "model": "profile",
+      "via": "user"
+    }
+  }
+}

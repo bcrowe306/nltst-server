@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "name": "rating"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "required": true,
+      "max": 5,
+      "min": 1,
+      "type": "integer"
+    },
+    "article": {
+      "via": "ratings",
+      "model": "article"
+    },
+    "user": {
+      "via": "ratings",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

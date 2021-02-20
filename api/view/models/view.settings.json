@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "views",
+  "info": {
+    "name": "view"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "video": {
+      "via": "views",
+      "model": "video"
+    }
+  }
+}

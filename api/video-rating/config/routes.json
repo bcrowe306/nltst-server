@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/video-ratings",
+      "handler": "video-rating.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-ratings/count",
+      "handler": "video-rating.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/video-ratings/:id",
+      "handler": "video-rating.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/video-ratings",
+      "handler": "video-rating.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/video-ratings/:id",
+      "handler": "video-rating.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/video-ratings/:id",
+      "handler": "video-rating.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

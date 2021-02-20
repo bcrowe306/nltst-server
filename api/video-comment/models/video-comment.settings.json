@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_comments",
+  "info": {
+    "name": "video_comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "video": {
+      "via": "comments",
+      "model": "video"
+    },
+    "user": {
+      "via": "video_comments",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
