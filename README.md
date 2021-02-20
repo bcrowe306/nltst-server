@@ -3,7 +3,9 @@ This server is the backend for the New Life South Tampa App. It is a Strapi appl
 
 ## Environment Vars
 ```
-AWS_REGION=
+HOST
+PORT
+AWS_REGION
 AWS_BUCKET
 AWS_ACCESS_KEY_ID
 AWS_ACCESS_SECRET
